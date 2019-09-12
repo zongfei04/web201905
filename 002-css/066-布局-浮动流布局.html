@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>066-布局-浮动流布局.html</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.father{
+			width: 539px;
+			height: 400px;
+			padding: 20px;
+			margin: 10px auto;
+			border: 10px solid #000;
+		}
+		.son1{
+			float: left;
+			width: 100px;
+			height: 100px;
+			/*margin-left: 50px;*/
+			/*margin: 0 auto;*/
+			background-color: red;
+		}
+		.son2{
+			float: right;
+			width: 100px;
+			height: 100px;
+			/*margin-left: 400px;*/
+			background-color: green;
+		}
+		.son{
+			/*display: inline-block;*/
+		}
+	</style>
+</head>
+<body>
+	<div class="father">
+		<div class="son son1"></div><div class="son son2"></div>
+	</div>
+</body>
+</html>

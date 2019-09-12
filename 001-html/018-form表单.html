@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>018-form表单.html</title>
+	<style>
+		textarea{
+			resize: none;
+		}
+	</style>
+</head>
+<body>
+	<form action="http://www.kuazhu.com" method="GET">
+		<p>
+			<label for="username">
+				用户名:
+			</label>
+			<input type="text" name="username" value="" placeholder="请输入用户名" autocomplete="off" id="username">
+		</p>
+		<p>
+			<label for="password">密码:</label>
+			<input type="password" name="password" value="" id="password">
+		</p>
+		<p>
+			性别:
+			<input type="radio" name="sex" value="male" checked>男
+			<input type="radio" name="sex" value="female">女
+			<input type="radio" name="sex" value="no">保密
+		</p>
+		<p>
+			爱好:
+			<input type="checkbox" name="hobby" value="basketball" checked>篮球
+			<input type="checkbox" name="hobby" value="football">足球
+			<input type="checkbox" name="hobby" value="table">乒乓球
+		</p>
+		<p>
+			所在城市:
+			<select name="city" id="">
+				<optgroup label="直辖市">
+					<option value="bj">北京</option>
+					<option value="sh">上海</option>
+					<option value="ss">深圳</option>
+				</optgroup>
+				<optgroup label="省会">
+					<option value="gz" >广州</option>
+					<option value="zz" >郑州</option>
+					<option value="xa" >西安</option>
+					<option value="lz" >兰州</option>
+				</optgroup>
+			</select>
+		</p>
+		<p>
+			自我介绍:
+			<textarea name="intro" cols="20" rows="5"></textarea>
+		</p>
+		<p>
+			<input type="hidden" name="sec" value="123456789">
+		</p>
+		<p>
+			邮箱校验:
+			<input type="email" name="email">	
+		</p>
+		<p>
+			数字:
+			<input type="number" name="num">
+		</p>
+		<p>
+			日期:
+			<input type="date" name="date">
+		</p>
+		<p>
+			取色板:
+			<input type="color" name="color">
+		</p>
+		<p>
+			上传照片:
+			<input type="file">
+		</p>
+		<p>
+			<input type="image" src="./images/example12.jpg">
+			<input type="button" value="注册">
+			<input type="submit" value="注册信息">
+			<input type="reset">
+		</p>
+	</form>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>031-优先级3.html</title>
+	<style>
+		/*
+		1.谁的ID多听谁的
+		2.ID一样多是谁的类多听谁的
+		3.ID和类一样多谁的标签多听谁的
+		4.都一样多时谁写在最后听谁的
+		*/
+		/*
+		#ul1 #li1 #p1{
+			color: red;
+		}
+		#ul1 #li1 .p1{
+			color: orange;
+		}
+		#ul1 #p1{
+			color: blue;
+		}
+		#p1{
+			color: yellow;
+		}
+		*/
+		/*
+		#ul1 .li1 .p1{
+			color: red;
+		}
+		#ul1 .li1 p{
+			color: blue;
+		}
+		#ul1 li p{
+			color: green;
+		}
+		*/
+		/*ul li p{
+			color: red;
+		}
+		ul p{
+			color: blue;
+		}
+		p{
+			color: orange;
+		}*/
+		
+		/*p#p1{
+			color: orange;
+		}
+		#li1 p{
+			color: blue;
+		}
+		#ul1 p{
+			color: red;
+		}*/
+		/*#ul1 #li1{
+			color: red;
+		}
+		.ul1 .li1{
+			color: blue;
+		}
+		p{
+			color: green;
+		}*/
+		#ul1 #p1{
+			color: red;
+			font-size: 24px;
+		}
+		#ul1 .p1{
+			color: blue !important;
+			font-size: 12px;
+		}
+	</style>
+</head>
+<body>
+	<ul class="ul1" id="ul1">
+		<li class="li1" id="li1">
+			<p class="p1" id="p1">我是段落</p>
+		</li>
+	</ul>
+</body>
+</html>

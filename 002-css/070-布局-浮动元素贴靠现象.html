@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>070-布局-浮动元素贴靠现象.html</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.father{
+			width: 600px;
+			height: 600px;
+			margin: 10px auto;
+			border: 1px solid #000;
+		}
+		.son1{
+			float: left;
+			width: 100px;
+			height: 200px;
+			background-color: red;
+		}
+		.son2{
+			float: left;
+			width: 200px;
+			height: 100px;
+			background-color: green;
+		}
+		.son3{
+			float: left;
+			width: 301px;
+			/*width: 650px;*/
+			height: 100px;
+			background-color: purple;
+		}
+	</style>
+
+</head>
+<body>
+	<div class="father">
+		<div class="son1"></div>
+		<div class="son2"></div>
+		<div class="son3"></div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>087-布局-定位流中元素显示顺序-下</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.grfather{
+			position: relative;
+			z-index: 9;
+		}
+		.father1{
+			position: relative;
+			width: 200px;
+			height: 200px;
+			background-color: red;
+			z-index: 3;
+		}
+		.son1{
+			position: absolute;
+			top: 200px;
+			left: 300px;
+			width: 100px;
+			height: 100px;
+			background-color: orange;
+			z-index: 9;
+		}
+		.father2{
+			position: relative;
+			width: 200px;
+			height: 200px;
+			background-color: purple;
+			z-index: 2;
+		}
+		.son2{
+			position: absolute;
+			top:0;
+			left: 220px;
+			width: 100px;
+			height: 100px;
+			background-color: pink;
+			z-index: 10;
+		}
+	</style>
+</head>
+<body>
+	<div class="grfather">
+		<div class="father1">
+			<div class="son1"></div>
+		</div>
+	</div>
+	
+	<div class="father2">
+		<div class="son2"></div>
+	</div>
+</body>
+</html>

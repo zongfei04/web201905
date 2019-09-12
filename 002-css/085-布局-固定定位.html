@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>085-布局-固定定位.html</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		body{
+			height: 2000px;
+		}
+		.father{
+			position: relative;
+			width: 600px;
+			height: 400px;
+			margin: 0 auto;
+			border: 1px solid #000;
+		}
+		.son{
+			position: fixed;
+			/*position: absolute;*/
+			/*right: 0;
+			top: 0;*/
+			left: 50%;
+			top: 0;
+			margin-left: -200px;
+			width: 400px;
+			height: 100px;
+			background-color: red;
+		}
+		.son2{
+			width: 200px;
+			height: 200px;
+			background-color: green;
+		}
+		.box{
+			position: static;
+			width: 200px;
+			height: 200px;
+			background-color: gold;
+		}
+	</style>
+</head>
+<body>
+	<div class="father">
+		<div class="son"></div>
+		<div class="son2"></div>
+	</div>
+	<div class="box"></div>
+</body>
+</html>

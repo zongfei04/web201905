@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>057-背景-背景图片显示区域.html</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		div{
+			width: 200px;
+			height: 200px;
+			border: 20px dashed #000;
+			padding: 30px;
+			margin: 10px auto;
+			background-image: url(./img/example3.jpg);
+			background-repeat: no-repeat;
+		}
+		div:nth-child(2){
+			background-origin: padding-box;
+		}
+		div:nth-child(3){
+			background-origin: border-box;
+		}
+		div:nth-child(4){
+			background-origin: content-box;
+		}
+	</style>
+</head>
+<body>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+</body>
+</html>

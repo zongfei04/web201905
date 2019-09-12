@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>082-布局-绝对定位.html</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.box{
+			position: absolute;
+			top: 0;
+			/*bottom: 0;*/
+			/*right: 0;*/
+			left: 0;
+			width: 100px;
+			height: 100px;
+			background-color: red;
+		}
+		.box2{
+			width: 200px;
+			height: 200px;
+			background-color: blue;
+		}
+		span{
+			position: absolute;
+			right: 0;
+			top: 0;
+			width: 100px;
+			height: 100px;
+			padding: 20px;
+			margin: 20px;
+			border: 1px solid #000;
+			background-color: green;
+		}
+	</style>
+</head>
+<body>
+	<div class="box"></div>
+	<div class="box2"></div>
+	<span>span</span>
+</body>
+</html>

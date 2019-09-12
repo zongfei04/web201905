@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>068-布局-浮动流脱标特点.html</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.father{
+			width: 400px;
+			height: 400px;
+			margin: 10px auto;
+			border: 1px solid #000;
+		}
+		.son,span{
+			width: 100px;
+			height: 100px;
+			padding: 20px;
+			margin: 10px;
+			border: 1px solid #000;
+			background-color: red;
+		}
+		span:first-child{
+			float: left;
+		}
+		span:last-child{
+			float: right;
+		}
+		.son:first-child{
+			float: left;
+		}
+		.son:last-child{
+			float: right;
+		}
+	</style>
+</head>
+<body>
+	<div class="father">
+		<span>span1</span>
+		<span>span2</span>
+	</div>
+	<div class="father">
+		<div class="son">span1</div>
+		<div class="son">span2</div>
+	</div>
+</body>
+</html>

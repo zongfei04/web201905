@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>083-布局-绝对定位参考点.html</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		body{
+			width: 2000px;
+			height: 2000px;
+		}
+		.grfather{
+			/*position: relative;*/
+			width: 600px;
+			height: 600px;
+			margin: 0 auto;
+			padding: 10px;
+			background-color: green;
+			border: 20px solid #000;
+			overflow: hidden;
+		}
+		.father{
+			/*position: relative;*/
+			width: 400px;
+			height: 400px;
+			padding: 10px;
+			margin: 50px auto;
+			border: 30px solid #ff0;
+			background-color: pink;
+		}
+		.son{
+			position: absolute;
+			/*top: 0;*/
+			bottom:0;
+			right: 0;
+			width: 100px;
+			height: 100px;
+			background-color: red;
+		}
+	</style>
+</head>
+<body>
+	<div class="grfather">
+		<div class="father">
+			<div class="son"></div>
+		</div>
+	</div>
+	
+</body>
+</html>
