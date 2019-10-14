@@ -5,6 +5,11 @@ var url = require('url');
 
 var server = http.createServer(function(req,res){
 	// console.log(req.method);
+	// console.log(req.headers.cookie);
+	// var oDate = new Date('2019-10-14 18:41:20').toUTCString();
+	// res.setHeader('Set-Cookie',["username=tom","age=18"]);
+	// res.setHeader('Set-Cookie',["username=tom;Expires="+oDate]);
+	// res.setHeader('Set-Cookie',["username=tom;Max-Age=10"]);
 
 	if(req.url == "/favicon.ico"){
 		res.end("favicon.ico");
