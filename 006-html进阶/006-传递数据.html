@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>004-拖拽基本实现.html</title>
+	<title>006-传递数据.html</title>
 	<style>
 		*{
 			margin: 0;
@@ -27,10 +27,18 @@
 <script src="js/jquery-1.12.4.js"></script>
 <script>
 	$(function(){
+		$('#target')
+		.on('dragstart',function(ev){
+			// console.log(ev.target.id)
+			ev.originalEvent.dataTransfer.setData('targetId',ev.target.id)
+		})	
+
 		$('#container')
-		.on('drop',function(){
-			console.log('aa')
-			$('#container').append($('#target'));
+		.on('drop',function(ev){
+			// $('#container').append($('#target'));
+			var targetId = ev.originalEvent.dataTransfer.getData('targetId')
+			// console.log(targetId)
+			$('#container').append($('#'+targetId));
 		})
 		.on('dragover',function(ev){
 			ev.preventDefault();
