@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>032-项目水平对齐方式.html</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.father{
+			display: flex;
+			width: 1000px;
+			/*height: 400px;*/
+			margin: 50px auto;
+			border: 1px solid #000;
+
+			/*flex-direction: row;*/
+			/*flex-direction: row-reverse;*/
+			/*flex-direction: column;*/
+			/*flex-direction: column-reverse;*/
+
+
+			/*flex-wrap: nowrap;*/
+			/*flex-wrap: wrap;*/
+			/*flex-wrap: wrap-reverse;*/
+
+			/*flex-flow: row-reverse wrap;*/
+
+
+			/*justify-content: flex-start;*/
+			/*justify-content: flex-end;*/
+			justify-content: center;
+			/*justify-content: space-between;*/
+			/*justify-content: space-around;*/
+
+		}
+		.father div{
+			height: 50px;
+		}
+		.son1{
+			width: 100px;
+			background-color: pink;
+		}
+		.son2{
+			width: 200px;
+			background-color: orange;
+		}
+		.son3{
+			width: 400px;
+			background-color: skyblue;
+		}
+	</style>
+</head>
+<body>
+	<div class="father">
+		<div class="son1">son1</div>
+		<div class="son2">son2</div>
+		<div class="son3">son3</div>
+	</div>
+</body>
+</html>

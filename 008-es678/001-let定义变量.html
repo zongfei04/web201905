@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>001-let定义变量.html</title>
+</head>
+<body>
+	
+</body>
+<script>
+	/*
+	var a = 1
+	var a = 2
+	console.log(window )
+	console.log('var :::',a)
+	console.log('window var :::',window.a)
+	*/
+	// let a = 1
+	/*
+	let a = 2
+	console.log(window)
+	console.log('let:::',a)
+	console.log('window let:::',window.a)
+	*/
+
+	//var a
+	/*
+	console.log('var :::',a)
+	console.log('let :::',b)
+	var a = 1
+	let b = 2
+	*/
+
+	/*
+	if(true){
+		var a = 111
+		let b = 222
+	}
+
+	console.log('a:::',a)
+	console.log('b:::',b)
+	*/
+
+
+	function show(){
+		var a = 111
+		let b = 222
+		console.log('show a',a)//111
+		console.log('show a',b)//222
+		function fn(){
+			console.log('fn a',a)//111
+			console.log('fn b',b)//222 报错
+		}
+		fn()
+	}
+	show()
+</script>
+</html>

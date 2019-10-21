@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>037-项目属性-定义基础值.html</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.father{
+			display: flex;
+			width: 800px;
+			margin: 50px auto;
+			border: 1px solid #000;
+		}
+		.father div{
+			height: 50px;
+		}
+		.son1{
+			flex:1 1 auto;
+			width: 100px;
+			background-color: pink;
+		}
+		.son2{
+			width: 200px;
+			background-color: orange;
+			/*flex-basis: 300px;*/
+		}
+		.son3{
+			width: 300px;
+			background-color: skyblue;
+		}
+	</style>
+</head>
+<body>
+	<div class="father">
+		<div class="son1">son1</div>
+		<div class="son2">son2</div>
+		<div class="son3">son3</div>
+	</div>
+</body>
+</html>
