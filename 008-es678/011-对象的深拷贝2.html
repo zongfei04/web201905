@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>011-对象的深拷贝2.html</title>
+</head>
+<body>
+	
+</body>
+<script src="js/jquery-1.12.4.js"></script>
+<script>
+	let obj = {
+		name:'tom',
+		age:18,
+		friends:{name:'leo',age:20},
+		pets:['cat','dog']
+	}
+	/*
+	const obj2 = {...obj}
+	obj2.name = 'anmy'
+	obj2.friends.name = 'peter'
+	obj2.pets.push('tiger')
+
+	console.log('obj::',obj)//name:tom;obj.friends.name:prter true
+	console.log('obj2::',obj2)//name:anmy;obj2.friends.name:peter true
+	*/
+
+	/*
+	const obj2 = JSON.parse(JSON.stringify(obj))
+	obj2.name = 'anmy'
+	obj2.friends.name = 'peter'
+	obj2.pets.push('tiger')
+
+	console.log('obj::',obj)
+	console.log('obj2::',obj2)
+	*/
+
+
+	const obj2 = $.extend(true,{},obj)
+	obj2.name = 'anmy'
+	obj2.friends.name = 'peter'
+	obj2.pets.push('tiger')
+
+	console.log('obj::',obj)
+	console.log('obj2::',obj2)
+</script>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>014-数组的去重.html</title>
+</head>
+<body>
+	
+</body>
+<script>
+	let arr = [11,45,62,11,32,45,99,78]
+	function uniqueArr1(arr){
+		let result = []
+		for(let i = 0;i<arr.length;i++){
+			if(result.indexOf(arr[i],0) == -1){
+				result.push(arr[i])
+			}
+		}
+
+		return result
+	}
+	console.log('arr::',arr)
+
+	//console.log(uniqueArr1(arr))
+
+
+	function uniqueArr2(arr){
+		let result = []
+		let obj = {}
+		for(let i = 0;i<arr.length;i++){
+			obj[arr[i]] = ''
+		}
+		// console.log(obj)
+		for(let key in obj){
+			result.push(key*1)
+		}
+		return result
+	}
+	// console.log(uniqueArr2(arr))
+
+
+
+	function uniqiuArr3(arr){
+		let s = new Set(arr)
+		// console.log(s)
+		let result = [...s]
+		return result 
+	}
+	console.log(uniqiuArr3(arr))
+</script>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>018-函数的参数.html</title>
+</head>
+<body>
+	
+</body>
+<script>
+	/*
+	function show(name,age){
+		var name = name || 'tom'
+		var age = age || 18
+		console.log(name,age)
+	}
+	//show()//tom 18
+	show('leo',20)
+	*/
+
+	/*
+	function show(age,name='tom'){
+		console.log(name,age)
+	}
+	// show('leo',18)
+	show(18)
+	*/
+
+
+	/*
+	let i = 1
+	function show(x = ++i){
+		console.log(x)
+	}
+	show()//2
+	i = 5
+	show()//6 
+	*/
+
+	function ajax(url,{method='post',data='id=001'} = {}){
+		console.log(url,method,data)
+	}
+	ajax('http://api.kuazhu.com',{method:'get',data:'id=002'})
+
+
+	function show(...arr){
+		console.log(arr)
+	}
+	show(11,22,33)
+</script>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>008-数组的扩展运算.html</title>
+</head>
+<body>
+	<ul>
+		<li>li01</li>
+		<li>li02</li>
+		<li>li03</li>
+		<li>li04</li>
+		<li>li05</li>
+		<li>li06</li>
+		<li>li07</li>
+		<li>li08</li>
+		<li>li09</li>
+		<li>li10</li>
+	</ul>
+</body>
+<script>
+	/*
+	let arr = [11,22,33]
+	console.log(arr)
+	console.log(...arr)
+	*/
+
+	/*
+	let arr = [11,22]
+	function total(n1,n2){
+		console.log(n1+n2)
+	}
+	
+
+	total(...arr)
+	*/
+
+	/*
+	function total(...arr){
+		console.log(arr)
+		let result = 0
+		for(let i = 0;i<arr.length;i++){
+			result += arr[i]
+		}
+		console.log(result)
+	}
+
+	total(11,22,33,44)
+	*/
+
+	//11,56
+	//var arr = [11,56,3,9,75,12,36,111]
+	// console.log(Math.max(11,56,3,9,75,12,36))
+	// console.log(Math.max.apply(null,arr))
+	// console.log(Math.max(...arr))
+
+
+	/*
+	var arr = [11,56,3,9,75,12,36,111]
+	var arr2 = arr//浅copy
+	arr2.push(222)
+	console.log('arr::',arr)//[11,56,3,9,75,12,36,111]
+	console.log('arr2::',arr2)//[11,56,3,9,75,12,36,111,222]
+	*/
+	/*
+	var arr = [11,56,3,9,75,12,36,111]
+	var arr2 = []
+	for(let i = 0;i<arr.length;i++){
+		arr2.push(arr[i])
+	}
+	arr2.push(222)
+	console.log('arr::',arr)//[11,56,3,9,75,12,36,111]
+	console.log('arr2::',arr2)//[11,56,3,9,75,12,36,111,222]
+	*/
+
+	/*
+	var arr = [11,56,3,9,75,12,36,111]
+	var arr2 = arr.concat()
+	arr2.push(222)
+	console.log('arr::',arr)//[11,56,3,9,75,12,36,111]
+	console.log('arr2::',arr2)//[11,56,3,9,75,12,36,111,222]
+	*/
+
+	/*
+	var arr = [11,56,3,9,75,12,36,111]
+	var arr2 = arr.slice()
+	arr2.push(222)
+	console.log('arr::',arr)//[11,56,3,9,75,12,36,111]
+	console.log('arr2::',arr2)//[11,56,3,9,75,12,36,111,222]
+	*/
+
+	/*
+	var arr = [11,56,3,9,75,12,36,111]
+	var arr2 = [...arr]
+	arr2.push(222)
+	console.log('arr::',arr)//[11,56,3,9,75,12,36,111]
+	console.log('arr2::',arr2)//[11,56,3,9,75,12,36,111,222]
+	console.log(arr == arr2)
+	*/
+
+	var oList = document.getElementsByTagName('li')
+	console.log(oList)
+	console.log([...oList])
+</script>
+</html>
