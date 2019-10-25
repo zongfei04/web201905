@@ -1,22 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html>
 <head>
-	<meta charset="UTF-8">
-	<title>028-test.html</title>
-	<style>
-		*{
-			margin: 0;
-			padding: 0;
-		}
-		.box{
-			width: 200px;
-			height: 100px;
-			background-color: #ccc;
-			border-radius: 30%;
-		}
-	</style>
+<meta charset="utf-8">
+<title>文字超过一定字数用省略号显示</title>
+<script type="text/javascript" src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js" language="javascript"></script>
 </head>
 <body>
-	<div class="box"></div>
+    <ul id="demo">
+        <li>我是最终要显示的内容</li>
+        <li>我是最终要显示的内容我是最终要显示的内容</li>
+        <li>我是最终</li>
+        <li>文字超过一定字数用省略号显示</li>
+        <li>我是最终要</li>
+    </ul>
+    <script type="text/javascript">
+        $("#demo li").each(function(){
+            var str = $(this).html();
+            var subStr = str.substring(0,5);
+            //alert(subStr);
+            $(this).html(subStr + (str.length > 5 ? '...': ''));
+        });
+    </script>
 </body>
-</html>

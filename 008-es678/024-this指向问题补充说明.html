@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>024-this指向问题补充说明.html</title>
+</head>
+<body>
+	
+</body>
+<script>
+	var id = 33
+	function Timer(id){
+		//var tiemr = {}
+		//this => timer{}
+		this.id = id 
+		console.log('this1:::',this)//window
+		setTimeout(function(){
+			console.log('this2:::',this)//window
+			console.log(this.id)//11
+		},100)
+
+		//return this
+	}
+
+	const t1 = new Timer(11)
+	console.log(t1)
+	// window.Timer(11)
+	/*
+	function Timer(id){
+		this.id = id 
+		setTimeout(()=>{
+			console.log(this)//timer{}
+			console.log(this.id)//11
+		},100)
+	}
+	*/
+
+	
+	
+
+
+</script>
+</html>

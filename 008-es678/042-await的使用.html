@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>042-await的使用.html</title>
+</head>
+<body>
+	
+</body>
+<script>
+	//遇到await会等待后面的语句执行完毕,然后再去执行下面的语句
+	/*
+	async function fn(){
+		const data1 = await 'get data1'
+
+		console.log('data1::',data1)
+
+		const data2 = await 'get data2'
+
+		console.log('data2::',data2)
+
+		return data1
+	}
+
+	const p = fn()
+	p.then(data=>{
+		console.log(data)
+	})
+	*/
+
+	/*
+	function fn(){
+		const data1 = await 'get data1'
+
+		console.log('data1::',data1)
+
+		return data1
+	}
+	const p = fn()
+	*/
+	const promsie = new Promise((resolve,reject)=>{
+		setTimeout(()=>{
+			// resolve('get promise ok')
+			reject('get promise err')
+		},100)
+	})
+	async function fn(){
+		try{
+			const data1 = await promsie
+
+			console.log('data1::',data1)
+
+			console.log('alawys do someting ...')
+		}
+		catch(err){
+			console.log(err)
+		}
+		
+
+		return 'ok'
+	}
+
+	const p1 = fn()
+	p1.then(data=>{
+		console.log('data::',data)
+	})
+</script>
+</html>

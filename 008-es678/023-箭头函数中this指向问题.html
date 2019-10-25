@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>023-箭头函数中this指向问题.html</title>
+</head>
+<body>
+	
+</body>
+<script>
+	var id = 33
+	/*
+	function Timer(id){
+		this.id = id 
+		window.setTimeout(function(){
+			console.log(this)//window
+			console.log(this.id)//33
+		},100)
+	}
+	*/
+	function Timer(id){
+		this.id = id 
+		setTimeout(()=>{
+			console.log(this)//timer{}
+			console.log(this.id)//11
+		},100)
+	}
+	const t1 = new Timer(11)
+	
+
+
+</script>
+</html>
